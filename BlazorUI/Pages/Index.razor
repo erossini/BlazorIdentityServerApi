@@ -1,0 +1,96 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+<div class="alert alert-warning" role="alert">
+    Before authentication will function correctly, you must configure your provider details in <code>Program.cs</code>
+</div>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@if (_weatherService == null)
+{
+    <p><em>Loading from service...</em></p>
+    <p><b>@_errorService</b></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Summary</th>
+                <th>Temperature (C)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var company in _weatherService)
+            {
+                <tr>
+                    <td>@company.Date</td>
+                    <td>@company.Summary</td>
+                    <td>@company.TemperatureC</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@if (_weatherHttp == null)
+{
+    <p><em>Loading from HttpClient...</em></p>
+    <p><b>@_errorHttp</b></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Summary</th>
+                <th>Temperature (C)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var company in _weatherHttp)
+            {
+                <tr>
+                    <td>@company.Date</td>
+                    <td>@company.Summary</td>
+                    <td>@company.TemperatureC</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Inject]
+    public IWeatherService _service { get; set; }
+
+    [Inject]
+    public HttpClient _http { get; set; }
+
+    private IEnumerable<WeatherForecast> _weatherService;
+    private WeatherForecast[] _weatherHttp;
+
+    private string _errorService;
+    private string _errorHttp;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _weatherService = await _service.GetWeather();
+
+        try
+        {
+            _weatherHttp = await _http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        }
+        catch (Exception ex)
+        {
+            _errorHttp = ex.Message;
+        }
+    }
+}
