@@ -8,5 +8,6 @@ In the [PureSourceCode](https://www.puresourcecode.com) blog I wrote some posts 
 - [Setting Up A Blazor WebAssembly Application](https://www.puresourcecode.com/dotnet/blazor/setting-up-a-blazor-webassembly-application/)
 - [Working With Blazor’s Component Model](https://www.puresourcecode.com/dotnet/blazor/working-with-blazors-component-model/)
 - [Secure Blazor WebAssembly With IdentityServer4](https://www.puresourcecode.com/dotnet/blazor/secure-blazor-webassembly-with-identityserver4/)
+- [Blazor Using HttpClient With Authentication](https://www.puresourcecode.com/dotnet/blazor/blazor-using-httpclient-with-authentication/)
 
 The source code in this repository is specificly for integrating security calls between Blazor and Api where the authentication and authorization is based on [IdentityServer4](https://www.puresourcecode.com/tag/identityserver4/). 
