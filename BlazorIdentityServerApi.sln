@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApi", "WeatherApi\WeatherApi.csproj", "{30ADD69B-C42F-4430-9865-FC6AA63BBB6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorUI", "BlazorUI\BlazorUI.csproj", "{1287160C-638D-4C76-8D5F-0AD99826C7A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorUI", "BlazorUI\BlazorUI.csproj", "{1287160C-638D-4C76-8D5F-0AD99826C7A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyEmployees.OAuth", "CompanyEmployeesOAuth\CompanyEmployees.OAuth.csproj", "{D64E579A-A5AD-4B97-ACD0-35725BC79377}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1287160C-638D-4C76-8D5F-0AD99826C7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1287160C-638D-4C76-8D5F-0AD99826C7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1287160C-638D-4C76-8D5F-0AD99826C7A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64E579A-A5AD-4B97-ACD0-35725BC79377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64E579A-A5AD-4B97-ACD0-35725BC79377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64E579A-A5AD-4B97-ACD0-35725BC79377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64E579A-A5AD-4B97-ACD0-35725BC79377}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
